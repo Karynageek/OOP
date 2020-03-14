@@ -1,19 +1,20 @@
 package gmail.com;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Main {
 
 	public static void main(String[] args) {
 		Student student1 = new Student("Karyna", "Chelpan", "female", 20, 4, "Compute Sience", 82);
 		Student student2 = new Student("Anya", "Grona", "female", 19, 4, "Compute Sience", 85);
-		Student student3 = new Student("Roma", "Dudnik", "male", 20, 4, "Compute Sience", 70);
+		Student student3 = new Student("Roma", "Dudnik", "male", 17, 4, "Compute Sience", 70);
 		Student student4 = new Student("Victor", "Gilyk", "male", 20, 4, "Compute Sience", 82);
-		Student student5 = new Student("Vova", "Verevkin", "male", 20, 4, "Compute Sience", 69);
+		Student student5 = new Student("Vova", "Verevkin", "male", 17, 4, "Compute Sience", 69);
 		Student student6 = new Student("Natasha", "Shmakova", "female", 20, 4, "Compute Sience", 78);
 		Student student7 = new Student("Oksana", "Ctolar", "female", 20, 4, "Compute Sience", 82);
 		Student student8 = new Student("Anna", "Onichenko", "female", 19, 4, "Compute Sience", 81);
-		Student student9 = new Student("Oleg", "Ctrilchuk", "male", 20, 4, "Compute Sience", 72);
+		Student student9 = new Student("Oleg", "Ctrilchuk", "male", 18, 4, "Compute Sience", 72);
 		Student student10 = new Student("Oleg", "Alimover", "male", 21, 4, "Compute Sience", 82);
 		Student student11 = new Student("German", "Bolachevsky", "male", 21, 4, "Compute Sience", 90);
 		Group groupCommon = new Group();
@@ -54,7 +55,15 @@ public class Main {
 
 		for (Student student : groupList) {
 			System.out.println(student);
+		}
+		System.out.println();
+		System.out.println(groupCommon.getRecruterToString());
+		System.out.println();
+		Comparator comp = new CompareSurname().thenComparing(new CompareAvaragemarks());
 
+		for (Student student : groupList) {
+			System.out.println(student);
 		}
 	}
+
 }

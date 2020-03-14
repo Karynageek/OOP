@@ -1,9 +1,9 @@
 package gmail.com;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
-public class Group implements Comparator<Object> {
+
+public class Group {
 	private Student[] groupList = new Student[10];
 
 	public Group() {
@@ -55,20 +55,6 @@ public class Group implements Comparator<Object> {
 	public String toString() {
 		return "Group [groupList=" + Arrays.toString(groupList) + "]";
 	}
+	
 
-	@Override
-	public int compare(Object obj1, Object obj2) {
-		if (obj1 == obj2) {
-			return 0;
-		}
-		if (obj1 == null) {
-			return -1;
-		}
-		if (obj2 == null) {
-			return 1;
-		}
-		Student a = (Student) obj1;
-		Student b = (Student) obj2;
-		return (a.getSurname().compareTo(b.getSurname()));
-	}
 }
