@@ -3,7 +3,7 @@ package gmail.com;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class Group implements Comparator<Object>, Voenkom {
+public class Group implements Voenkom {
 	private Student[] groupList = new Student[10];
 
 	public Group() {
@@ -54,47 +54,6 @@ public class Group implements Comparator<Object>, Voenkom {
 	@Override
 	public String toString() {
 		return "Group [groupList=" + Arrays.toString(groupList) + "]";
-	}
-
-	@Override
-	public int compare(Object obj1, Object obj2) {
-		if (obj1 == obj2) {
-			return 0;
-		}
-		if (obj1 == null) {
-			return -1;
-		}
-		if (obj2 == null) {
-			return 1;
-		}
-		Student a = (Student) obj1;
-		Student b = (Student) obj2;
-		return (a.getSurname().compareTo(b.getSurname()));
-	}
-
-	public int compare(Object obj1, Object obj2, Object obj3, Object obj4) {
-		if (obj1 != null && obj2 == null && obj4 == null) {
-			return 1;
-		}
-		if (obj1 == null && obj2 != null && obj3 == null) {
-			return -1;
-		}
-		if (obj1 == null && obj2 == null && obj3 == obj4) {
-			return 0;
-		}
-
-		Student a = (Student) obj1;
-		Student b = (Student) obj2;
-		Student c = (Student) obj3;
-		Student d = (Student) obj4;
-
-		if (a.getAverageRating() > b.getAverageRating()) {
-			return 1;
-		}
-		if (a.getAverageRating() < b.getAverageRating()) {
-			return -1;
-		}
-		return (c.getSurname().compareTo(d.getSurname()));
 	}
 
 	@Override

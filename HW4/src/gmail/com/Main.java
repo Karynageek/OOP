@@ -15,7 +15,7 @@ public class Main {
 		Student student7 = new Student("Oksana", "Ctolar", "female", 20, 4, "Compute Sience", 82);
 		Student student8 = new Student("Anna", "Onichenko", "female", 19, 4, "Compute Sience", 81);
 		Student student9 = new Student("Oleg", "Ctrilchuk", "male", 18, 4, "Compute Sience", 72);
-		Student student10 = new Student("Oleg", "Alimover", "male", 21, 4, "Compute Sience", 82);
+		Student student10 = new Student("Karyna", "Chelpan", "female", 20, 4, "Compute Sience", 80);
 		Student student11 = new Student("German", "Bolachevsky", "male", 21, 4, "Compute Sience", 90);
 		Group groupCommon = new Group();
 		try {
@@ -30,7 +30,6 @@ public class Main {
 			groupCommon.addStudent(student9);
 			groupCommon.addStudent(student10);
 			groupCommon.addStudent(student11);
-
 		} catch (NumberOfStudentException e) {
 			e.printStackTrace();
 		}
