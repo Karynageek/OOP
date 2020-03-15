@@ -22,11 +22,11 @@ public class FactorialTask implements Runnable {
 	@Override
 	public void run() {
 		Thread thr = Thread.currentThread();
-			if (thr.isInterrupted()) {
-				System.out.println(thr.getName() + " Interrupted ");
-				return;
-			}
-			System.out.println(thr.getName() + " -> " + number + " != " + fact(number));
+		if (thr.isInterrupted()) {
+			System.out.println(thr.getName() + " Interrupted ");
+			return;
 		}
-
+		System.out.println(thr.getName() + " -> " + number + " != " + fact(number));
 	}
+
+}
