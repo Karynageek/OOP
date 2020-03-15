@@ -26,13 +26,13 @@ public class Main {
 			e.printStackTrace();
 		}
 		FOAIS10.printGroupofStudents();
-		try (ObjectOutputStream OOS = new ObjectOutputStream(new FileOutputStream("file.txt"))) {
+		try (ObjectOutputStream OOS = new ObjectOutputStream(new FileOutputStream("file"))) {
 			OOS.writeObject(FOAIS10);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		Group FIT8 = null;
-		try (ObjectInputStream OIS = new ObjectInputStream(new FileInputStream("file.txt"))) {
+		try (ObjectInputStream OIS = new ObjectInputStream(new FileInputStream("file"))) {
 			FIT8 = (Group) OIS.readObject();
 		} catch (IOException | ClassNotFoundException e) {
 			e.printStackTrace();
